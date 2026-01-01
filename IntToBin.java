@@ -9,6 +9,11 @@ public class IntToBin {
     /** Returns the binary representation of the given integer, as a string of 0's and 1's.  */
     public static String toBinary(int x) {
         //// Replace the following statement with your code
-        return "";
+        if (x < 2) {
+                return Integer.toString(x);
+        }
+        
+        // Recursive step: compute binary of half the number, then append current bit
+        return toBinary(x / 2) + Integer.toString(x % 2);
     }    
  }
